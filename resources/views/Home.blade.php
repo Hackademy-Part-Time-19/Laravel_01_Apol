@@ -7,6 +7,8 @@
   <title>Portfolio Website</title>
   <link rel="stylesheet" href="/style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -14,9 +16,9 @@
     <nav class="fill"> <!--Nav Bar-->
       <img src="./imagini/LogoSignature.png" alt="">
       <ul>
-      <li><a href="/">Home</a></li>
-        <li><a href="/Articoli">Articoli</a></li>
-        <li><a href="/ChiSono">Chi Sono</a></li>
+      <li><a href="{{ route('Home')}}">Home</a></li>
+        <li><a href="{{ route('Articoli')}}">Articoli</a></li>
+        <li><a href="{{ route('ChiSono')}}">Chi Sono</a></li>
       </ul>
       <div class="search">
         <input type="text" placeholder="Cerca">
@@ -26,15 +28,14 @@
  
   </header>
   <section class="about"> <!--Chi sono-->
-    <h1 class="titoloHome">{{ $titoloHome }}</h1>
+    <h1 class="titoloHome">{{ $titoloHome}}</h1>
     <div class="description">
       <div class="line"></div>
-      <p class="testDes">{{$testDes}}
-      </p>
+    
     </div>
   </section>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

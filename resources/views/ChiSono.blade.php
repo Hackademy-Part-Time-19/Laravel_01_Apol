@@ -7,6 +7,7 @@
   <title>Portfolio Website</title>
   <link rel="stylesheet" href="/style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -14,9 +15,9 @@
     <nav class="fill"> <!--Nav Bar-->
       <img src="./imagini/LogoSignature.png" alt="">
       <ul>
-      <li><a href="/">Home</a></li>
-        <li><a href="/Articoli">Articoli</a></li>
-        <li><a href="/ChiSono">Chi Sono</a></li>
+      <li><a href="{{route('Home')}}">Home</a></li>
+        <li><a href="{{route('Articoli')}}">Articoli</a></li>
+        <li><a href="{{route('ChiSono')}}">Chi Sono</a></li>
       </ul>
       <div class="search">
         <input type="text" placeholder="Cerca">
@@ -29,12 +30,11 @@
     <h1 class="titoloChiSono">{{$titoloChiSono}}</h1>
     <div class="description">
       <div class="line"></div>
-      <p>Junior full stack developer con oltre tre anni di esperienza come logo designer e web designer freelance. Focalizzazione principale per i linguaggi di sviluppo front-end, dedito al design di alta qualità. Collaboratore versatile con professionisti di svariati settori, alberghiero e della cura della persona. Buone competenze organizzative e di problem solving. Professionista creativo, attitudine positiva e costante ricerca di perfezionamento integrate alla volontà di affrontare nuove sfide in un ambiente collaborativo.
-      </p>
+    
     </div>
   </section>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

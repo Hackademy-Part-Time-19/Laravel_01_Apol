@@ -14,15 +14,44 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home',
-    ['titoloHome'=>'Home'], 
-    ['testDes'=>'Neanche il tempo di presentarli e subito offerta TOP per Galaxy S24 Ultra. Il nuovissimo smartphone Samsung con AI è infatti disponibile ad un prezzo davvero interessante. Sono tante le promozioni e offerte disponibili da subito che consento di risparmiare anche oltre 300€ sull acquisto dei nuovi top di gamma coreani.
-    Le promozioni sono differenti a seconda dello store e di seguito vi segnaliamo tutte le possibili combinazioni. Purtroppo non è semplicissimo ma speriamo di fare chiarezza con lo schema a seguire.']);
-});
+    return view('Home', ['titoloHome'=>'Home']);
+})->name('Home');
 Route::get('/Articoli', function () {
-    return view('Articoli',['titoloArticoli'=>'Articoli']);
-});
+
+    $Articoli=[
+        ['title'=>'Articolo 0','category'=>'Zero','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi'],
+       ['title'=>'Articolo 1','category'=>'Prima','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi'],
+         ['title'=>'Articolo 2','category'=>'Seconda','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi'],
+      ['title'=>'Articolo 3','category'=>'Terza','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi']
+      ];
+
+
+
+
+    return view('Articoli',
+    ['titoloArticoli'=>'Articoli'],
+    ['Articoli'=>$Articoli]
+);
+})->name('Articoli');
+
+
+
+
+
+
 Route::get('/ChiSono', function () {
     return view('ChiSono',['titoloChiSono'=>'Chi Sono']);
-});
+})->name('ChiSono');
 
+
+Route::get('/Articolo/{id}', function($id){
+    $Articoli=[
+      ['title'=>'Articolo 0','category'=>'Zero','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi'],
+     ['title'=>'Articolo 1','category'=>'Prima','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi'],
+       ['title'=>'Articolo 2','category'=>'Seconda','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi'],
+    ['title'=>'Articolo 3','category'=>'Terza','description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam nisi']
+    ];
+
+   
+    return view('Detaglio',['articolo'=> $Articoli[$id]]);
+})->name('DetaglioArticolo');
