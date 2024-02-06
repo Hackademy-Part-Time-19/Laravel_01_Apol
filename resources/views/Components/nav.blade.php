@@ -16,6 +16,7 @@
                 @endforeach
             </ul>
         </li>
+        <li><a href="{{ route('Contacts') }}">Contatti</a></li>
     </ul>
     <div class="search">
         <input type="text" placeholder="Cerca">

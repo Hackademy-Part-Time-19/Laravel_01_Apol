@@ -22,7 +22,10 @@ class PageController extends Controller
         return view('ChiSono', ['titoloChiSono' => 'Chi Sono']);
     }
 
-
+    public function Contacts()
+    {
+        return view('Contatti');
+    }
     
 
 

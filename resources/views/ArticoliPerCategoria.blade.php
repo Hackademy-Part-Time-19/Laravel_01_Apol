@@ -23,3 +23,4 @@
     </section>
     <x-footer />
 </x-layout>
+ 
